@@ -16,7 +16,7 @@ body{
   nav{
     background: white;
     margin: 40px 400px 10px 0px;
-    height: 200px;
+    height: 15vh;
     border-radius:0px 9px 9px 0px;
     display: flex;
     justify-content: space-between;
