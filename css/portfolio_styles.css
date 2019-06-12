@@ -1,23 +1,11 @@
-/* Diagnostic Styling
-    *Change Background Color
-    *Outline Elements
-*/
-
-
-
-
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab&display=swap');
 
 body {
   margin:0;
   padding:0;
   background: #111;
-  color: white;
 }
-
-/*NAV*/
-
-#nav{
+nav {
   background-color:#fff;
   margin: 1.5% 25% 0% 0%;
   border-radius: 0px 5px 5px 0px;
@@ -120,85 +108,92 @@ body {
 
 
 
+.codepen-container div {
+	box-sizing: border-box;
+	transition: all ease-in-out .5s;
+	-moz-transition: all ease-in-out .5s;
+	-webkit-transition: all ease-in-out .5s;
+  width: 80vw;
+}
+.video {
+	margin: 20px auto;
+	max-width: 500px;
+}
 
-/* CONTACT */
-
-::-webkit-input-placeholder{color: #777;}
-:-moz-placeholder { /* Firefox 18- */ color: #777;}
-::-moz-placeholder {  /* Firefox 19+ */ color: #777;}
-:-ms-input-placeholder {color: #777;}
-
-.contact-container{
-  position: relative;
-  width: 50%;
-	padding: 1em;
-  font-family: 'Roboto';
+.plyr__video-embed iframe {
 	
+	height: 200%;
+}
+.icetab {
+  border-radius:5px 5px 0px 0px;
+	display: inline-block; 
+	border-bottom: 0px;	
+	margin: 0px;	
+  color: #fff;
+	cursor: pointer;
 }
 
-.contact-container h2{
-	text-align: center;
-	text-transform: uppercase;
-	color: #f55;
+.icetab:hover{
+  background: gray;
 }
 
-#contact input[type="text"],#contact input[type="email"], #contact textarea{
-	display: block;
-	padding: 10px;
-	margin: 10px auto;
-	width: 100%;
-	font-size: 18px;
-	color: #777;
-  border: 1px solid #ccc;
-}
-
-#contact textarea{
-	font-size: 16px;
-}
-
-#contact input:hover, #contact textarea:hover{
-	border: 1px solid #888;
-}
-#contact input:focus, #contact textarea:focus{
-	border: 1px solid #777;
-}
-
-
-#contact textarea{
-	max-width: 100%;
-	min-width: 100%;
-	max-height: 180px;
-	min-height: 180px;
-  resize: none;
-}
-
-#contact .send-button{
-	text-align: center;
-}
-
-#contact .send-button button[type="submit"]{
-	color: #fff;
-  background: #e74c3c;
-  border: none;
-	width: 100%;
-	padding: 10px 0;
-	font-size: 20px;
-	text-transform: uppercase;
-	transition: .5s all ease;
-  cursor: pointer;
-}
-
-#contact .send-button button[type="submit"]:hover{
-	background: #c0392b;
-}
-
-#contact .send-button button[type="submit"]:focus{
+#icetab-content {
+	overflow: hidden;
 	position: relative;
-	top: 2px;
 }
 
-/*FOOTER*/
 
+.tabcontent {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #fff;
+	width: 100%;
+	border-top: 0px;
+  border-radius: 0px 5px 5px 5px;
+	border-top: 0px;
+	transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+}
+
+.tabcontent:first-child {
+	position: relative;	
+}
+.tabcontent.tab-active {
+	border-top: 0px;
+	display: block;
+	transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-webkit-transform: translateY(0%);
+}
+
+
+/* A tiny wee bit of visual formating */
+
+.codepen-container {
+  max-width: 700px;
+  margin: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabcontent {
+	padding: 40px;
+}
+.icetab {
+	padding: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.current-tab { 
+	background: #fff;
+  color: #111
+}
+
+.chocolat-parent img{
+  width: 300px;
+}
 footer{
   background-color:#fff;
   margin: 10% 0% 1.5% 25%;
@@ -304,11 +299,6 @@ footer{
 }
 
 
-
-/*######################################\*
-              Responsive
-\*######################################*/
-
 @media (max-width: 967px) 
 {
   
@@ -339,30 +329,3 @@ footer{
     border-left:none;
     width:100%;
   }
-
-  
-  #contact textarea{
-    max-width: 98%;
-    min-width: 98%;
-    min-height: 152px;
-    margin-right: 0;
-  }
-
-	#contact .right,#contact .left{
-		display: block;
-	}
-
-	#contact .right{
-		float: right;
-		width: 50%;
-	}
-  
-	#contact .left{
-		float: left;
-		width: 50%;
-	}
-	.cl{
-    clear: both;
-  }
-}
-
